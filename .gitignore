@@ -1,0 +1,33 @@
+# Node.js 忽略规则
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# 编辑器和IDE忽略规则
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*~*
+
+# 操作系统忽略规则
+.DS_Store
+Thumbs.db
+
+# 测试报告和构建输出
+coverage/
+dist/
+build/
+
+# 其他忽略项
+.env
+.env.*
+.env.local
+.env.*.local
+*.log
+*.pid
+*.seed
+*.pid.lock

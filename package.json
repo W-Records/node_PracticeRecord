@@ -1,0 +1,12 @@
+{
+  "name": "node_practicerecord",
+  "version": "1.0.0",
+  "description": "nodejs的练习记录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "PJ",
+  "license": "ISC"
+}
