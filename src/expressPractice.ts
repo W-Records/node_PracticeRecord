@@ -46,6 +46,16 @@ app.get("/queryGoodsById/:goodsID", (request, response) => {
 // 获取json数据
 app.post("/saveGoods", (request, response) => {
     console.log(request.body);
+    // 属性名还必须是小写，不同字母格式为：token-h
+    console.log(request.headers["tokenh"]);
+
+    // 设置响应头
+    response.set("my-set-header","i set header HHHHH");
+
+
+    // 设置响应状态码,201表示成功创建新内容
+    response.status(201);
+
     response.send({
         "msg" : request.body
     });
