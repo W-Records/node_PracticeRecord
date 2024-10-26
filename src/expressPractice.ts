@@ -4,6 +4,9 @@
 // 使用别的模块导出的内容
 import app from "./app";
 
+// 拿取配置信息
+import { APP_PORT } from "./app/app.config"
+
 import { Request, Response } from "express";
 
 
@@ -15,8 +18,8 @@ const port = 3000;
 // 使用这个插件将前端数据转换成JSON对象
 // app.use(express.json());
 
-app.listen(port, () => {
-    console.log(`HHH_Server is running on ${port}---开启实时编译`);
+app.listen(APP_PORT, () => {
+    console.log(`HHH_Server is running on ${APP_PORT}---开启实时编译1`);
 })
 
 
