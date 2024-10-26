@@ -1,17 +1,19 @@
 // express框架的使用，搭建web服务器
 // const express = require("express");
-import express from "express";
+// import express from "express";
+// 使用别的模块导出的内容
+import app from "./app";
 
 import { Request, Response } from "express";
 
 
-const app = express();
+// const app = express();
 const port = 3000;
 
 // 前端post请求携带请求体JSON格式的参数，需要使用express.json()中间件转换一下
 // 不使用这个插件request.body拿到的数据就是为undefined
 // 使用这个插件将前端数据转换成JSON对象
-app.use(express.json());
+// app.use(express.json());
 
 app.listen(port, () => {
     console.log(`HHH_Server is running on ${port}---开启实时编译`);
