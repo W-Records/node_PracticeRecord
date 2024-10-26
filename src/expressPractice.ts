@@ -1,5 +1,10 @@
 // express框架的使用，搭建web服务器
-const express = require("express");
+// const express = require("express");
+import express from "express";
+
+import { Request, Response } from "express";
+
+
 const app = express();
 const port = 3000;
 
@@ -36,7 +41,7 @@ app.get("/queryGoodsById/:goodsID", (request, response) => {
     // 获取参数id
     const { goodsID } = request.params;
 
-    const NewGoods = goods.filter(item => item.id == goodsID);
+    const NewGoods = goods.filter(item => item.id == parseInt(goodsID,10));
 
     response.send(NewGoods[0]);
 
@@ -44,7 +49,7 @@ app.get("/queryGoodsById/:goodsID", (request, response) => {
 
 
 // 获取json数据
-app.post("/saveGoods", (request, response) => {
+app.post("/saveGoods", (request: Request, response: Response) => {
     console.log(request.body);
     // 属性名还必须是小写，不同字母格式为：token-h
     console.log(request.headers["tokenh"]);
