@@ -14,7 +14,7 @@ const port = 3000;
 app.use(express.json());
 
 app.listen(port, () => {
-    console.log(`HHH_Server is running on ${port}`);
+    console.log(`HHH_Server is running on ${port}---开启实时编译`);
 })
 
 

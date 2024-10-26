@@ -4,7 +4,8 @@
   "description": "nodejs的练习记录",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "tsc-watch --onSuccess \"node dist/expressPractice.js\" "
   },
   "keywords": [],
   "author": "PJ",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.9",
+    "tsc-watch": "^6.2.0",
     "typescript": "^5.6.3"
   }
 }
