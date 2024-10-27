@@ -11,6 +11,11 @@ export const Myindex = (
     response: Response,
     next: NextFunction
 ) =>{
+
+    if( request.headers.authorization !== "secret" ){
+        return next(new Error("Unauthorized"))
+    }
+
     const MyData = getMsg();
     response.send(MyData);
 
