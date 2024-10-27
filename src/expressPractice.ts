@@ -1,3 +1,13 @@
+// 这里文件夹的名字应该为main.ts,
+// 因为这里是程序的入口，服务的监听在这里
+// "start:dev": "tsc-watch --onSuccess \"node dist/expressPractice.js\" "
+// 服务node 执行的程序也是这里
+
+
+
+
+
+
 // express框架的使用，搭建web服务器
 // const express = require("express");
 // import express from "express";
@@ -19,7 +29,7 @@ const port = 3000;
 // app.use(express.json());
 
 app.listen(APP_PORT, () => {
-    console.log(`HHH_Server is running on ${APP_PORT}---开启实时编译1`);
+    console.log(`HHH_Server is running on ${APP_PORT}---开启实时编译2`);
 })
 
 
