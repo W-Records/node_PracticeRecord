@@ -12,7 +12,8 @@
   "author": "PJ",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^3.11.4"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

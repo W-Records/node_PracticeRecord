@@ -20,6 +20,10 @@ import { APP_PORT } from "./app/app.config"
 import { Request, Response } from "express";
 
 
+// 导入数据库的连接测试是否连接服务成功
+import {connection} from "./app/database/MySQL";
+
+
 // const app = express();
 const port = 3000;
 
@@ -30,6 +34,17 @@ const port = 3000;
 
 app.listen(APP_PORT, () => {
     console.log(`HHH_Server is running on ${APP_PORT}---开启实时编译3`);
+})
+
+
+
+// 测试数据库服务的连接
+connection.connect(err => {
+    if (err) {
+        console.log("数据库连接 失败no", err);
+        return;
+    }
+    console.log("数据库连接 成功yes");
 })
 
 
