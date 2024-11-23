@@ -6,7 +6,7 @@ import { Request, Response, NextFunction } from "express";
 // 导入服务层代码
 import {getMsg} from "./userModule.service";
 
-export const Myindex = (
+export const Myindex = async (
     request: Request,
     response: Response,
     next: NextFunction
@@ -16,7 +16,7 @@ export const Myindex = (
         return next(new Error("Unauthorized"))
     }
 
-    const MyData = getMsg();
+    const MyData = await getMsg();
     response.send(MyData);
 
 }
