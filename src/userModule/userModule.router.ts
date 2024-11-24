@@ -14,4 +14,8 @@ const router = express.Router();
 router.get("/getUserMsg", reuqestURL, userModuleController.Myindex);
 
 
+// 给插入数据url绑定处理器
+router.post("/saveUserNote", reuqestURL, userModuleController.saveMsg);
+
+
 export default router;

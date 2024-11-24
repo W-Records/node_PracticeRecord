@@ -29,7 +29,7 @@ export const defaultErrorHandler = (
     switch(err.message){
         default: 
             statusCode = 500;
-            message = "服务器错误，被错误处理中间件捕获,默认处理";
+            message = ` 服务器错误，被错误处理中间件捕获,默认处理: ${err.message} `;
             break;
     }
 

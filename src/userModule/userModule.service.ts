@@ -1,4 +1,5 @@
 import {connection} from '../app/database/MySQL'
+import { UserNoteModel } from './userModule.model';
 
 export const getMsg = async () =>{
     // 模拟的数据
@@ -20,6 +21,23 @@ export const getMsg = async () =>{
     const [MyData] = await connection.promise().query(statement);
 
     console.log(MyData);
+
+    return MyData;
+}
+
+
+// 插入数据
+export const insertMsg = async (note: UserNoteModel) => {
+    
+
+    // 操作数据库
+    // 注意这里的 set是node MySQL库独有的语法
+    const statement = `
+        INSERT INTO user_notes
+        set ?
+    `;
+
+    const [MyData] = await connection.promise().query(statement, note);
 
     return MyData;
 }

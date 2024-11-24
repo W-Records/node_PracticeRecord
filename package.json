@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "tsc-watch --onSuccess \"node dist/expressPractice.js\" ",
-    "start:playground": "tsc-watch --onSuccess \"node dist/playground/promisePracticeAll/promisePractice.js\" "
+    "start:playground": "tsc-watch --onSuccess \"node dist/playground/test/testCreateObj.js\" "
   },
   "keywords": [],
   "author": "PJ",
